@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>api</title>
+    <style>
+        #container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto;
+            gap: 20px;
+            margin: 5px auto;
+            width: 80%;
+            border: 2px solid black;
+        }
+
+        #container img {
+            width: 100%;
+        }
+
+        #container>div {
+            border: 2px solid greenyellow
+        }
+    </style>
+</head>
+
+<body>
+    <a href="cart.html">Cart</a>
+    <div id="container">
+
+    </div>
+
+</body>
+<script>
+    let url = "https://fakestoreapi.com/products"
+    fetch(url).then(res => res.json()).then(data => {
+        console.log(data)
+        displaycard(data)
+    })
+
+    let cartitems=JSON.parse(localStorage.getItem("cart1"))||[]
+
+    function displaycard(data) {
+        data.forEach(function (elem) {
+            let div = document.createElement("div");
+            let image = document.createElement("img");
+            image.setAttribute("src", elem.image);
+
+            let title = document.createElement("h2");
+            title.innerText = elem.title;
+            let des = document.createElement("p");
+            des.innerText = elem.description;
+            let price = document.createElement("p");
+            price.innerText = elem.price;
+            let rating = document.createElement("p");
+            rating.innerText = elem.rating.rate;
+            let btn = document.createElement("button")
+            btn.innerText = "Add To Cart"
+            btn.addEventListener("click", function () {
+                cartitems.push(elem);
+                localStorage.setItem("cart1", JSON.stringify(cartitems))
+                if (elem == elem) {
+                    alert("Product added to cart")
+                }
+
+
+            })
+
+            div.append(image, title, des, price, rating, btn);
+            document.querySelector("#container").append(div);
+        })
+    }
+
+</script>
+
+</html>

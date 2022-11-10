@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart Page</title>
+    <style>
+        /* Write all necessery css here  */
+        #cart-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto;
+            gap: 20px;
+        }
+
+        #cart-container>div>img {
+            width: 100%;
+        }
+
+        #cart-container>div {
+            text-align: center;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="api.html">api</a>
+
+    <h1 id="total">Your Total cart Price is:- <span id="cart-total">0</span></h1>
+    <div id="cart-container">
+        <!-- Here Append All the cart Products  -->
+    </div>
+</body>
+<script>
+    // Write all necessery JS here 
+
+    let cartitems = JSON.parse(localStorage.getItem("cart1"))
+    console.log(cartitems)
+    displaycards(cartitems);
+    let count = 1;
+    var price1
+
+    function displaycards(cartitems) {
+        document.querySelector("#cart-container").innerHTML = ""
+
+        cartitems.forEach(function (elem, i) {
+
+            //console.log(elem)
+            let div = document.createElement("div");
+            let image = document.createElement("img");
+            image.setAttribute("src", elem.image);
+
+            let title = document.createElement("h2");
+            title.innerText = elem.title;
+            let des = document.createElement("p");
+            des.innerText = elem.description;
+            var price = document.createElement("p");
+            price.innerText = elem.price;
+            price1 = price
+            let rating = document.createElement("p");
+            rating.innerText = elem.rating.rate;
+            let btn = document.createElement("button")
+            btn.innerText = "Add To Cart"
+
+
+            //hello
+
+
+            let category = document.createElement("p")
+            category.innerHTML = elem.category
+            // < button > +</button > -> increment button
+            //   < span > quantity</span >
+            //     <button>-</button> -> decrement button
+            //       < button > Remove</button > -> Remove button
+            let btn1 = document.createElement("button")
+            btn1.innerText = "+"
+            let span = document.createElement("span")
+            span.innerHTML = "1"
+            let btn2 = document.createElement("button")
+            btn2.innerText = "-"
+            let btn3 = document.createElement("button")
+            btn3.innerText = "Remove"
+            btn1.addEventListener("click", function () {
+
+                if (count >= 4) {
+
+                    count = 4
+
+
+                    span.innerHTML = count
+                    alert("Maximum limit reached")
+
+                } else {
+                    count++;
+                    span.innerHTML = count
+                    //console.log(count)
+                    totalprice(count, price, elem, i)
+
+                }
+
+
+
+
+
+            })
+            btn2.addEventListener("click", function () {
+                // count--;
+                if (count <= 1) {
+                    count = 1
+                    span.innerHTML = count
+
+                } else {
+                    count--;
+                    span.innerHTML = count;
+                   // console.log(count)
+                    totalprice(count, price, elem, i)
+
+
+                }
+
+
+
+            })
+
+
+
+
+            btn3.addEventListener("click", function () {
+                delete1(elem, i)
+
+
+            })
+
+
+            div.append(image, title, des, price, rating, category, btn1, span, btn2)
+            div.append(btn3)
+            document.querySelector("#cart-container").append(div)
+
+
+        });
+
+
+
+
+    }
+
+ 
+            function totalprice(count, price,elem,i) {
+                console.log(elem,i)
+                console.log(elem.id,"jik")
+                
+                    elem=null;
+                    var count2 = count
+                console.log(count)
+                console.log(price1.innerHTML)
+                let final_price = count2 * price1.innerHTML;
+                console.log(final_price)
+                document.querySelector("#cart-total").innerHTML = final_price;
+                
+
+
+               
+
+            }
+
+
+
+
+
+    function delete1(elem, i) {
+        cartitems.splice(i, 1);
+        console.log(cartitems)
+        displaycards(cartitems)
+        localStorage.setItem("cart1", JSON.stringify(cartitems))
+
+
+    }
+
+</script>
+
+</html>
