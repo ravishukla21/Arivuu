@@ -6,6 +6,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@YourDailyKart</title>
+     <!-- slider top -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+     <!-- slider top end -->
+    <!-- slider top -->
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            height: 500px;
+            background: rgb(207, 35, 35);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 450px;
+            border:2px solid black;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            height:auto;
+        }
+        .swiper .swiper-button-prev,.swiper .swiper-button-next{
+            color:aliceblue;
+        }
+        .swiper .swiper-pagination-bullet-active{
+            background: white;
+
+        }
+    </style>
+     <!-- slider top end -->
     <style>
         * {
             margin: 0px;
@@ -246,10 +285,8 @@
         
     </style>
 </head>
-
 <body>
     <div id="top_bar"></div>
-
     <div id="nav_bar">
 
         <img width="5%" src="logo.jpg" alt="logo">
@@ -257,7 +294,7 @@
         <div id="categories_div">
             <a href="#">Home</a>
             <a href="#">About us</a>
-            <a href="#">Shop</a>
+            <a href="api.html">Shop</a>
             <a href="#">Categories</a>
             <a href="#">Contact Us</a>
 
@@ -272,6 +309,42 @@
         </div>
 
     </div>
+</body>
+<body>
+    <!-- slider top -->
+
+    <div class="container">
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="images\image-1.jpg" alt="first"></div>
+                <div class="swiper-slide"><img src="images\image-201.jpg" alt="second"></div>
+
+                <div class="swiper-slide"><img src="images\image-301.jpg" alt=""></div>
+                ...
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+        </div>
+
+
+    </div>
+    <!-- slider top end -->
+</body>
+
+<body>
+    
+
+   
 
     <div id="slider">slider</div>
 
@@ -388,7 +461,7 @@
     </div>
     <div class="footer_bottom">
         <div>
-            <h4>© 2019 – 2022 UBORIC. ALL RIGHTS RESERVED.</h4>
+            <h4>© 2019 - 2022 UBORIC. ALL RIGHTS RESERVED.</h4>
 
         </div>
         <div>
@@ -405,6 +478,37 @@
     let top_bar = document.createElement("div");
     top_bar.innerHTML = "FOR ONLINE PAYMENT EXTRA ₹5% DISCOUNT ON ORDERS ABOVE ₹500";
     document.querySelector("#top_bar").append(top_bar);
+</script>/
+<!-- slider top -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        
+        loop: true,
+        autoplay:{
+            delay:3000,
+            disableOnIntraction:false,
+        },
+
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+    });
 </script>
+<!-- slider top end -->
 
 </html>
