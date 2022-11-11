@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@YourDailyKart</title>
-     <!-- slider top -->
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-     <!-- slider top end -->
+    <!-- slider top -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <!-- slider top end -->
     <!-- slider top -->
     <style>
         * {
@@ -29,22 +29,25 @@
         .swiper {
             width: 100%;
             height: 450px;
-            border:2px solid black;
+            border: 2px solid black;
         }
 
         .swiper-slide img {
             width: 100%;
-            height:auto;
+            height: auto;
         }
-        .swiper .swiper-button-prev,.swiper .swiper-button-next{
-            color:aliceblue;
+
+        .swiper .swiper-button-prev,
+        .swiper .swiper-button-next {
+            color: aliceblue;
         }
-        .swiper .swiper-pagination-bullet-active{
+
+        .swiper .swiper-pagination-bullet-active {
             background: white;
 
         }
     </style>
-     <!-- slider top end -->
+    <!-- slider  end -->
     <style>
         * {
             margin: 0px;
@@ -64,7 +67,7 @@
             color: aliceblue;
             background-color: black;
             padding: 20px;
-           
+
             border-bottom: 1px solid whitesmoke;
 
         }
@@ -88,7 +91,7 @@
             grid-template-columns: repeat(5, 1fr);
             background-color: black;
             color: aliceblue;
-            
+
             border-bottom: 1px solid white;
             padding: 20px;
         }
@@ -98,7 +101,7 @@
             grid-template-columns: repeat(2, 1fr);
             background-color: black;
             color: aliceblue;
-           
+
             padding: 20px;
         }
 
@@ -282,9 +285,74 @@
             padding: 2px 6px;
             border-radius: 5px;
         }
-        
+    </style>
+    <!-- padding -->
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            text-align: center;
+        }
+
+        #new {
+            width: 400px;
+            background-color: black;
+            height: 20px;
+            color: aliceblue
+        }
+
+        .top {
+            padding: 20px;
+            color: aliceblue;
+            background-color: black;
+            padding: 20px;
+
+            border-bottom: 1px solid whitesmoke;
+
+        }
+
+        .top>form>button {
+            background-color: brown;
+
+
+        }
+
+        .footer {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            background-color: black;
+            color: aliceblue;
+
+            border-bottom: 1px solid white;
+            padding: 20px;
+        }
+
+        .footer_bottom {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            background-color: black;
+            color: aliceblue;
+
+            padding: 20px;
+        }
+
+
+
+        a:link {
+            color: #f9f9f9;
+            text-decoration: none;
+        }
+
+
+
+        a:hover {
+            text-decoration: underline;
+            color: red;
+        }
     </style>
 </head>
+
 <body>
     <div id="top_bar"></div>
     <div id="nav_bar">
@@ -292,7 +360,7 @@
         <img width="5%" src="logo.jpg" alt="logo">
 
         <div id="categories_div">
-            <a href="#">Home</a>
+            <a href="day-1.html">Home</a>
             <a href="#">About us</a>
             <a href="api.html">Shop</a>
             <a href="#">Categories</a>
@@ -302,14 +370,15 @@
         </div>
         <div id="addtocart_div">
             <a href="#">search</a>
-            <a href="#">login</a>
-            <a href="#">wishlist</a>
-            <a href="#">cart</a>
+            <a href="login.html">login</a>
+            <a href="signup.html">signup</a>
+            <a href="cart.html">cart</a>
 
         </div>
 
     </div>
 </body>
+
 <body>
     <!-- slider top -->
 
@@ -342,9 +411,9 @@
 </body>
 
 <body>
-    
 
-   
+
+
 
     <div id="slider">slider</div>
 
@@ -438,7 +507,7 @@
         </div>
         <div class="col_2">
             <h3>SHOP</h3>
-            <a href="#">My Acoount</a>
+            <a href="#">My Acount</a>
 
         </div>
         <div class="col_3">
@@ -470,7 +539,7 @@
 
         </div>
     </div>
-   
+
 
 
 </body>
@@ -478,17 +547,17 @@
     let top_bar = document.createElement("div");
     top_bar.innerHTML = "FOR ONLINE PAYMENT EXTRA ₹5% DISCOUNT ON ORDERS ABOVE ₹500";
     document.querySelector("#top_bar").append(top_bar);
-</script>/
+</script>
 <!-- slider top -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 <script>
     const swiper = new Swiper('.swiper', {
         // Optional parameters
-        
+
         loop: true,
-        autoplay:{
-            delay:3000,
-            disableOnIntraction:false,
+        autoplay: {
+            delay: 3000,
+            disableOnIntraction: false,
         },
 
         // If we need pagination
