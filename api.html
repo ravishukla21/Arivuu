@@ -1,11 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sidebar.css">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
     <title>api</title>
+    <style>
+        #top_bar>div {
+            background-color: rgb(11, 11, 11);
+            color: aliceblue;
+            border: rgb(187, 8, 8);
+            text-align: center;
+            border: 2px solid rgb(253, 253, 253);
+            position: relative;
+        }
+
+        #nav_bar {
+
+            display: flex;
+            margin: auto;
+            border: 2px solid green;
+            justify-content: space-evenly;
+            gap: 20px;
+
+            width: 100%;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            position: relative;
+            background-color: rgb(224, 208, 208);
+
+        }
+
+        a:link {
+            color: #000000;
+            text-decoration: none;
+        }
+
+
+
+        a:hover {
+            text-decoration: underline;
+            color: red;
+        }
+
+        #categories_div {
+            display: flex;
+            border: 2px solid rgb(0, 0, 0);
+            justify-content: space-evenly;
+            gap: 30px;
+            height: 20px;
+            margin-top: 20px;
+        }
+
+        #addtocart_div>div:hover {
+            cursor: pointer;
+        }
+
+        #addtocart_div>div {
+            border: 2px solid greenyellow;
+            height: 1px;
+        }
+
+
+
+
+        #addtocart_div {
+            display: flex;
+            border: 2px solid rgb(17, 17, 16);
+            justify-content: space-evenly;
+            gap: 20px;
+            margin-top: 20px;
+            height: 20px;
+
+        }
+    </style>
     <style>
         #container {
             display: grid;
@@ -25,25 +95,304 @@
             border: 2px solid greenyellow
         }
     </style>
+    <style>
+        /* footer */
+        * {
+            margin: 0px;
+            padding: 0px;
+            text-align: center;
+        }
+
+        #new_footer {
+            width: 400px;
+            background-color: black;
+            height: 20px;
+            color: aliceblue
+        }
+
+        .top_footer {
+            padding: 20px;
+            color: aliceblue;
+            background-color: black;
+            padding: 20px;
+
+            border-bottom: 1px solid whitesmoke;
+
+        }
+
+        .top_footer>form>button {
+            background-color: brown;
+
+
+        }
+
+        .footer_footer {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            background-color: black;
+            color: aliceblue;
+
+            border-bottom: 1px solid white;
+            padding: 20px;
+        }
+
+        .footer_bottom {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            background-color: black;
+            color: aliceblue;
+
+            padding: 20px;
+        }
+
+
+
+        .col_1 a:link,
+        .col_2 a:link,
+        .col_3 a:link,
+        .col_4 a:link,
+        .col_5 a:link {
+            color: #f9f9f9;
+            text-decoration: none;
+        }
+
+
+
+        .col_1 a:hover,
+        .col_2 a:hover,
+        .col_3 a:hover,
+        .col_4 a:hover,
+        .col_5 a:hover {
+            text-decoration: underline;
+            color: red;
+        }
+    </style>
+
 </head>
 
 <body>
-    <a href="cart.html">Cart</a>
-    <div id="container">
+    <div id="top_bar"></div>
+    <div id="nav_bar">
 
+        <img width="5%" src="logo.jpg" alt="logo">
+
+        <div id="categories_div">
+            <a href="day-1.html">Home</a>
+            <a href="#">About us</a>
+            <a href="api.html">Shop</a>
+            <a href="#">Categories</a>
+            <a href="#">Contact Us</a>
+
+
+        </div>
+        <div id="addtocart_div">
+            <a href="#">search</a>
+            <input oninput="search()" type="text">
+            
+            <a href="#">Categories</a>
+            <select id="select" onChange="handle()">
+                <option value="men's clothing">men's clothing</option>
+                <option value="women's clothing">women's clothing</option>
+                <option value="kitchen">kitchen</option>
+                <option value="electronics">electronics</option>
+            </select>
+            <a href="#">sort by price</a>
+            <select onchange="sort()" name="" id="sort">
+                <option value="">--</option>
+                <option value="LTH">LTH</option>
+                <option value="HTL">HTL</option>
+            </select>
+            <a href="cart.html">cart</a>
+
+        </div>
+
+    </div>
+</body>
+
+
+
+
+
+<body>
+
+    <div class="wrapper">
+        <div class="sidebar">
+            <h2>Categories</h2>
+            <ul>
+                <li>
+                    <option onclick="handle()" value="men's clothing">Mens</option>
+                    <!-- <a href="#"><i class=""></i>Mens</a> -->
+
+                </li>
+                <li>
+                    <option onclick="handle()" value="women's clothing">Womens</option>
+                    <!-- <a href="#"><i class=""></i>Womens</a> -->
+                </li>
+                <li>
+                    <option onclick="handle()" value="electronics">Electronics</option>
+                    <!-- <a href="#"><i class=""></i>Electronics</a> -->
+                </li>
+
+                <li>
+                    <option onclick="handle()" value="Jewellery">Jewellery</option>
+                    <!-- <a href="#"><i class=""></i>Jewellery</a> -->
+                </li>
+                <li>
+                    <option onclick="handle()" value="kids">kids</option>
+                    <!-- <a href="#"><i class=""></i>Misscleaneous</a> -->
+                </li>
+                <li>
+                    <option onclick="handle()" value="Misscleaneous">Misscleaneous</option>
+                    <!-- <a href="#"><i class=""></i>kids</a> -->
+                </li>
+            </ul>
+
+        </div>
+        <div id="container">
+
+        </div>
+    </div>
+
+</body>
+
+<body>
+
+
+</body>
+
+<body>
+    <!-- footer -->
+
+
+    <div class="top_footer">
+        <h2 style="color:rgb(255, 255, 255);">Want style Ideas and Treats?</h2>
+        <br><br>
+
+        <form>
+            <input id="new_footer" type="text" placeholder="Enter Email*">
+            <button id="button" type="submit">SUBSCRIBE</button>
+        </form>
+    </div>
+    <div class="footer_footer">
+        <div class="col_0">
+            <img width="50%" src="logo.jpg" alt="logo">
+        </div>
+        <div class="col_1">
+            <h3>SUPPORT</h3>
+            <a href="#">About Us</a><br>
+
+            <a href="#">Contact Us</a>
+
+        </div>
+        <div class="col_2">
+            <h3>SHOP</h3>
+            <a href="#">My Acoount</a>
+
+        </div>
+        <div class="col_3">
+            <h3>COMPANY</h3>
+            <a href="#">Shipping and Returns</a><br>
+            <a href="#">Privacy Policy</a><br>
+
+            <a href="#">Terms & Conditions</a><br>
+
+        </div>
+        <div class="col_4">
+            <h3>CONTACT</h3>
+
+            <h4>Customer Care <br>
+                Email:xyz@gmail.com <br>
+                Mobile: xxxxxxxxxxx <br>
+
+            </h4>
+        </div>
+    </div>
+    <div class="footer_bottom">
+        <div>
+            <h4>© 2019 – 2022 @YDK. ALL RIGHTS RESERVED.</h4>
+
+        </div>
+        <div class="col_5">
+            <a href="#">facebook</a>
+            <a href="#">instagram</a>
+
+        </div>
     </div>
 
 </body>
 <script>
-    let url = "https://fakestoreapi.com/products"
-    fetch(url).then(res => res.json()).then(data => {
-        console.log(data)
-        displaycard(data)
-    })
 
-    let cartitems=JSON.parse(localStorage.getItem("cart1"))||[]
+</script>
+<script>
+    let top_bar = document.createElement("div");
+    top_bar.innerHTML = "FOR ONLINE PAYMENT EXTRA ₹5% DISCOUNT ON ORDERS ABOVE ₹500";
+    document.querySelector("#top_bar").append(top_bar);
+</script>
+<script>
+    let url = "https://fakestoreapi.com/products";
+
+    let bag = [];
+    //let data=[];
+    async function Data() {
+        try {
+            let result = await fetch(url);
+            let output = await result.json();
+            // console.log(output);
+            bag = output;
+            data = [...output]
+            displaycard(output);
+
+        }
+        catch (error) {
+            alert(error);
+        }
+    }
+    Data();
+    function sort() {
+        console.log("sortchange")
+        let selected = document.querySelector("#sort").value;
+        console.log(selected)
+        if (selected = "HTL") {
+            bag.sort((a, b) => b.price - a.price)
+        }
+        if (selected = "LTH") {
+            bag.sort((a, b) => a.price - b.price)
+        }
+        console.log(bag)
+        displaycard(bag)
+
+
+    }
+    function search() {
+        let q = document.querySelector("input").value;
+        console.log(q)
+        let newdata = bag.filter(function (elem) {
+            return elem.title.toLowerCase().includes(q.toLowerCase());
+        })
+        console.log(newdata)
+        displaycard(newdata);
+    }
+
+
+
+
+
+    function handle() {
+        let selected = document.querySelector("#select").value;
+        //console.log(selected)
+        console.log(data)
+        let filtereddata = data.filter(function (elem) {
+            return elem.category == selected;
+        });
+        console.log(filtereddata)
+        displaycard(filtereddata)
+    }
+    let cartitems1 = JSON.parse(localStorage.getItem("cart12")) || []
+
+    let cartitems = JSON.parse(localStorage.getItem("cart1")) || []
 
     function displaycard(data) {
+        document.querySelector("#container").innerHTML = "";
         data.forEach(function (elem) {
             let div = document.createElement("div");
             let image = document.createElement("img");
@@ -51,6 +400,8 @@
 
             let title = document.createElement("h2");
             title.innerText = elem.title;
+            let category = document.createElement("h2");
+            category.innerText = elem.category;
             let des = document.createElement("p");
             des.innerText = elem.description;
             let price = document.createElement("p");
@@ -60,16 +411,38 @@
             let btn = document.createElement("button")
             btn.innerText = "Add To Cart"
             btn.addEventListener("click", function () {
+
+
+
+
+
                 cartitems.push(elem);
                 localStorage.setItem("cart1", JSON.stringify(cartitems))
+                //localStorage.setItem("cart12", JSON.stringify(cartitems))
                 if (elem == elem) {
                     alert("Product added to cart")
                 }
 
+                countryExist = cartitems1.some(elem1 => elem1.description === elem.description);
+                if (!countryExist) {
+                    cartitems1.push(elem);
+                    addToLocalStorage(cartitems1);
+                }
+                console.log(cartitems1);
+
+                function addToLocalStorage(arr) {
+
+                    localStorage.setItem("cart12", JSON.stringify(arr));
+                    //alert("WELCOME TO @YDK")
+                }
+
+
+
+
 
             })
 
-            div.append(image, title, des, price, rating, btn);
+            div.append(image, title, category, des, price, rating, btn);
             document.querySelector("#container").append(div);
         })
     }
