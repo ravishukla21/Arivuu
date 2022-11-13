@@ -10,6 +10,7 @@ Login HTML
 </head>
 
 <body>
+    
     <div class="login-box">
         <h1>Login</h1>
         <form>
@@ -26,7 +27,7 @@ Login HTML
     </p>
 </body>
 
-</html>
+
 <script>
     let arr = JSON.parse(localStorage.getItem("details")) || [];
     function myfun() {
@@ -44,12 +45,14 @@ Login HTML
                 console.log("good")
                 alert("Welcome")
 
-                window.location.href = "day-1.html"
+                window.location.href = "index.html"
+                
+                
 
 
             }
             else if (ele.email !== email && ele.password !== password) {
-                //alert("no account exist")
+                alert("no account exist")
             }
 
         });
@@ -59,3 +62,4 @@ Login HTML
     }
 
 </script>
+</html>

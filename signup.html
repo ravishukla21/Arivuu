@@ -67,13 +67,15 @@
             if (!countryExist) {
                 arr.push(obj);
                 addToLocalStorage(arr);
+            }else{
+                alert("Account alredy exist please login")
             }
             console.log(arr);
 
             function addToLocalStorage(arr) {
                 
                 localStorage.setItem("details", JSON.stringify(arr));
-                alert("WELCOME TO @YDK")
+                alert("WELCOME TO @YDK Please Login")
             }
 
            // arr.push(obj)
