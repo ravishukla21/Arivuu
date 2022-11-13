@@ -20,7 +20,7 @@
         .container {
             width: 100%;
             height: 500px;
-            background: rgb(207, 35, 35);
+            background: rgb(255, 255, 255);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -29,7 +29,9 @@
         .swiper {
             width: 100%;
             height: 450px;
-            border: 2px solid black;
+            border: 1px solid black;
+            margin-top: -25px;
+            ;
         }
 
         .swiper-slide img {
@@ -147,19 +149,23 @@
             border: rgb(187, 8, 8);
             text-align: center;
             border: 2px solid rgb(253, 253, 253);
+            height: 40px;
+            padding-top: 10px;
+
         }
 
         #nav_bar {
 
             display: flex;
             margin: auto;
-            border: 2px solid green;
+            border: 0px solid green;
             justify-content: space-evenly;
             gap: 20px;
 
             width: 100%;
             padding-top: 2px;
             padding-bottom: 2px;
+            background-color: rgb(224, 208, 208);
 
         }
 
@@ -168,11 +174,11 @@
 
         #categories_div {
             display: flex;
-            border: 2px solid rgb(0, 0, 0);
+            border: 0px solid rgb(0, 0, 0);
             justify-content: space-evenly;
             gap: 30px;
             height: 20px;
-            margin-top: 4px;
+            margin-top: 20px;
         }
 
         #addtocart_div>div:hover {
@@ -180,8 +186,9 @@
         }
 
         #addtocart_div>div {
-            border: 2px solid greenyellow;
+            border: 0px solid greenyellow;
             height: 1px;
+            margin-top: 20px;
         }
 
 
@@ -189,17 +196,17 @@
 
         #addtocart_div {
             display: flex;
-            border: 2px solid rgb(17, 17, 16);
+            border: 0px solid rgb(17, 17, 16);
             justify-content: space-evenly;
             gap: 20px;
-            margin-top: 4px;
+            margin-top: 20px;
         }
 
         #after_slider {
             display: flex;
             margin: auto;
-            width: 95%;
-            border: 2px solid blue;
+            width: 98%;
+            border: 0px solid blue;
             justify-content: space-between;
 
             text-align: center;
@@ -211,7 +218,7 @@
         #after_slider>div {
 
             width: 50%;
-            border: 2px solid black;
+            border: 0px solid black;
 
 
 
@@ -226,8 +233,9 @@
             grid-template-columns: repeat(2, 1fr);
             width: 90%;
             margin: auto;
-            border: 2px solid greenyellow;
+            border: 0px solid greenyellow;
             gap: 20px;
+            margin-top: 20px;
         }
 
         #boxes img {
@@ -235,21 +243,27 @@
         }
 
         #boxes>div {
-            border: 2px solid blue
+            border: 0px solid blue;
+            margin: 20px 0px;
         }
 
         #bestsellingproducts {
             display: flex;
             gap: 20px;
-            border: 2px solid black;
+            border: 0px solid black;
             justify-content: space-evenly;
-            width: 90%;
+            width: 100%;
             margin: auto;
+            margin: 20px 0px;
 
         }
 
         #bestsellingproducts>div {
-            border: 2px solid black
+            border: 0px solid black;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            ;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
         }
 
         #bestsellingproducts>div>img {
@@ -260,7 +274,7 @@
             width: 80%;
             margin: auto;
             text-align: center;
-            border: 1px solid black;
+            border: 0px solid black;
 
         }
 
@@ -273,12 +287,13 @@
             grid-template-columns: repeat(2, 1fr);
             width: 100%;
             margin: auto;
-            border: 2px solid green;
-            margin-top: 5px;
+            border: 0px solid green;
+            margin-top: 20px;
             padding-top: 6px;
+            margin-bottom: 20px;
         }
 
-        .benifits>div>button {
+        .benifits>div>form>button {
             color: white;
             background-color: black;
             border: none;
@@ -337,6 +352,10 @@
             padding: 20px;
         }
 
+        a {
+            font-weight: bolder;
+        }
+
 
 
         a:link {
@@ -350,7 +369,64 @@
             text-decoration: underline;
             color: red;
         }
+
+        #none,
+        #none option {
+            border: none;
+            border: 0px;
+        }
+
+        #none1 {
+            border: none;
+            background-color: aqua;
+
+        }
     </style>
+    <style>
+        #new_1:hover img {
+            transform: scale(1.1);
+        }
+
+        #new_1_1 {
+            position: absolute;
+            color: rgb(255, 255, 255);
+            top: 650px;
+            left: 70px;
+        }
+
+        #new_12_1 {
+            position: absolute;
+            color: rgb(255, 255, 255);
+            top: 650px;
+            left: 570px;
+        }
+
+        #new_123_1 {
+            position: absolute;
+            font-weight: bold;
+            color: rgb(248, 248, 248);
+            top: 650px;
+            left: 1000px;
+        }
+
+        #new_12:hover img {
+            transform: scale(1.1);
+        }
+
+        #new_123:hover img {
+            transform: scale(1.1);
+        }
+    </style>
+    <style>
+        #user_id{
+            margin-top:20px;
+            font-weight: bolder;
+            font-size: large;
+        }
+    </style>
+
+
+
 </head>
 
 <body>
@@ -360,19 +436,33 @@
         <img width="5%" src="logo.jpg" alt="logo">
 
         <div id="categories_div">
-            <a href="day-1.html">Home</a>
-            <a href="#">About us</a>
+            <a href="index.html">Home</a>
+            <a href="aboutus.html">About us</a>
             <a href="api.html">Shop</a>
-            <a href="#">Categories</a>
-            <a href="#">Contact Us</a>
+
+
+
+
+
+
+            <a href="contactus.html">Contact Us</a>
 
 
         </div>
         <div id="addtocart_div">
-            <a href="#">search</a>
+
             <a href="login.html">login</a>
             <a href="signup.html">signup</a>
             <a href="cart.html">cart</a>
+
+        </div>
+        <div id="user_id">
+            
+            <p id="your_id">
+
+            </p>
+            
+
 
         </div>
 
@@ -415,38 +505,75 @@
 
 
 
-    <div id="slider">slider</div>
+    <div id="slider"></div>
 
     <div id="after_slider">
-        <div>
-            <img src="https://www.uboric.com/wp-content/uploads/2022/08/banner2-1-670x391.jpg" alt="">
+        <div id="new_1">
+            <img src="homeimage/image1234.jpg" alt="hello" usemap="#workmap">
+            <!-- <img src="workplace.jpg" alt="Workplace" usemap="#workmap"> -->
+
+            <map name="workmap">
+                <area shape="rect" coords="34,44,270,350" alt="Computer" href="healthpersonal.html">
+                <area shape="rect" coords="290,172,333,250" alt="Phone" href="">
+                <area shape="circle" coords="337,300,44" alt="Coffee" href="">
+            </map>
         </div>
-        <div> <img src="https://www.uboric.com/wp-content/uploads/2022/08/banner2-1-670x391.jpg" alt="">
+
+        <h3 id="new_1_1">Health Care</h3>
+        <h3 id="new_12_1">Personal Care</h3>
+        <h3 id="new_123_1">Air Tight Containers</h3>
+
+        <div id="new_12"> <img src="homeimage/Soul-Serenity-2.png" alt="">
         </div>
-        <div> <img src="https://www.uboric.com/wp-content/uploads/2022/08/banner2-1-670x391.jpg" alt="">
+        <div id="new_123"> <img src="homeimage/lg2et_512.jpg" alt="" usemap="#workmap1">
+            <map name="workmap1">
+                <area shape="rect" coords="34,44,270,350" alt="Computer" href="container.html">
+                <area shape="rect" coords="290,172,333,250" alt="Phone" href="">
+                <area shape="circle" coords="337,300,44" alt="Coffee" href="">
+            </map>
         </div>
     </div>
     <h1>Shop By Category</h1>
-    <a id="clothing" href="#">clothing etc</a>
+    <a id="clothing" href="#"></a>
 
-    <h2>slider</h2>
+
     <div id="boxes">
-        <div><img src="https://www.uboric.com/wp-content/uploads/2022/08/banner2-1-670x391.jpg" alt=""></div>
-        <div><img src="https://www.uboric.com/wp-content/uploads/2022/08/banner2-1-670x391.jpg" alt=""></div>
-        <div><img src="https://www.uboric.com/wp-content/uploads/2022/08/banner2-1-670x391.jpg" alt=""></div>
-        <div><img src="https://www.uboric.com/wp-content/uploads/2022/08/banner2-1-670x391.jpg" alt=""></div>
+        <div><img src="image/image-09.jpg" alt=""></div>
+        <div><img src="image/image-10.jpg" alt=""></div>
+        <div><img src="image/image-20.jpg" alt=""></div>
+        <div><img src="image/image-11.jpg" alt=""></div>
     </div>
     <h1>Best Selling Products</h1>
     <div id="bestsellingproducts">
-        <div><img src="https://www.uboric.com/wp-content/uploads/2022/08/photo_2022-02-24_12-22-08-370x370.jpg" alt="">
+        <div><img src="bestselling/image-1.jpg" alt=""><br>
+            <h4>Chooper</h4><br>
+            <h4>200</h4>
         </div>
-        <div><img src="https://www.uboric.com/wp-content/uploads/2022/08/photo_2022-02-24_12-22-08-370x370.jpg" alt="">
+        <div><img src="bestselling/image-2.jpg" alt=""><br>
+            <h4>Aloe Vera Gel</h4><br>
+            <h4>250</h4>
         </div>
-        <div><img src="https://www.uboric.com/wp-content/uploads/2022/08/photo_2022-02-24_12-22-08-370x370.jpg" alt="">
+        <div><img src="bestselling/image-3.jpg" alt=""><br>
+            <h4>Kwath</h4><br>
+            <h4>330</h4>
         </div>
+        <div><img src="bestselling/image-4.jpg" alt=""><br>
+            <h4>oil</h4><br>
+            <h4>120</h4>
+        </div>
+        <div><img src="bestselling/image-5.jpg" alt=""><br>
+            <h4> Mediciene</h4><br>
+            <h4>220</h4>
+        </div>
+        <div><img src="bestselling/image-6.jpg" alt=""><br>
+            <h4>Watch</h4><br>
+            <h4>80</h4>
+        </div>
+
     </div>
-    <h1>NEW ARRIVALS</h1>
-    <div>check scroll options</div>
+    <h1></h1>
+    <div></div>
+    <br><br>
     <h1>The Ultimate Domestic Online Shopping Experience Platform in India</h1>
     <div class="info_last">
         <p>Online shopping with @ydk is quick, convenient and trouble-free. <br>
@@ -470,7 +597,10 @@
             <p>Multiple Payment Options</p> <br>
 
             <p>Order History</p> <br>
-            <button>Shop Now</button>
+
+            <form action="api.html">
+                <button type="submit">Shop Now</button>
+            </form>
 
 
         </div>
@@ -543,6 +673,31 @@
 
 
 </body>
+<script>
+    let your_id = JSON.parse(localStorage.getItem("details"))
+    console.log(your_id)
+    let max = 0
+    let value1
+    your_id.forEach((element, index) => {
+        if (index > max) {
+            max = index
+        }
+
+        value1 = element.firstname
+
+        console.log(value1, index)
+
+
+    });
+    console.log(max, value1)
+    document.querySelector("#your_id").innerHTML = "Welcome"+":"+"😇"+value1
+
+    console.log(your_id.length)
+
+</script>
+<script>
+
+</script>
 <script>
     let top_bar = document.createElement("div");
     top_bar.innerHTML = "FOR ONLINE PAYMENT EXTRA ₹5% DISCOUNT ON ORDERS ABOVE ₹500";

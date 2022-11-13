@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>airtightcontainers</title>
+    <style>
+        #top_bar>div {
+            background-color: rgb(11, 11, 11);
+            color: aliceblue;
+            border: rgb(187, 8, 8);
+            text-align: center;
+            border: 2px solid rgb(253, 253, 253);
+        }
+
+        #nav_bar {
+
+            display: flex;
+            margin: auto;
+            border: px solid green;
+            justify-content: space-evenly;
+            gap: 20px;
+
+            width: 100%;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            background-color: rgb(224, 208, 208);
+
+        }
+
+        a:link {
+            color: #000000;
+            text-decoration: none;
+        }
+
+
+
+        a:hover {
+            text-decoration: underline;
+            color: red;
+        }
+
+        #categories_div {
+            display: flex;
+            border: px solid rgb(0, 0, 0);
+            justify-content: space-evenly;
+            gap: 30px;
+            height: 20px;
+            margin-top: 20px;
+        }
+
+        #addtocart_div>div:hover {
+            cursor: pointer;
+        }
+
+        #addtocart_div>div {
+            border: px solid greenyellow;
+            height: 1px;
+        }
+
+
+
+
+        #addtocart_div {
+            display: flex;
+            border: px solid rgb(17, 17, 16);
+            justify-content: space-evenly;
+            gap: 20px;
+            margin-top: 20px;
+            height: 20px;
+
+        }
+    </style>
+    <style>
+        /* footer */
+        * {
+            margin: 0px;
+            padding: 0px;
+            text-align: center;
+        }
+
+        #new_footer {
+            width: 400px;
+            background-color: black;
+            height: 20px;
+            color: aliceblue
+        }
+
+        .top_footer {
+            padding: 20px;
+            color: aliceblue;
+            background-color: black;
+            padding: 20px;
+
+            border-bottom: 1px solid whitesmoke;
+
+        }
+
+        .top_footer>form>button {
+            background-color: brown;
+
+
+        }
+
+        .footer_footer {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            background-color: black;
+            color: aliceblue;
+
+            border-bottom: 1px solid white;
+            padding: 20px;
+        }
+
+        .footer_bottom {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            background-color: black;
+            color: aliceblue;
+
+            padding: 20px;
+        }
+
+
+
+        .col_1 a:link,
+        .col_2 a:link,
+        .col_3 a:link,
+        .col_4 a:link,
+        .col_5 a:link {
+            color: #f9f9f9;
+            text-decoration: none;
+        }
+
+
+
+        .col_1 a:hover,
+        .col_2 a:hover,
+        .col_3 a:hover,
+        .col_4 a:hover,
+        .col_5 a:hover {
+            text-decoration: underline;
+            color: red;
+        }
+    </style>
+    <style>
+        #container_content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto;
+            gap: 20px;
+            width: 80%;
+            margin: auto;
+            margin-bottom: 30px;;
+            margin-top: 30px;;
+
+        }
+
+        #container_content img {
+            width: 100%;
+            margin-bottom: 2px;
+        }
+
+        #container_content div {
+            padding: 20px 10px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="top_bar"></div>
+    <div id="nav_bar">
+
+        <img width="5%" src="logo.jpg" alt="logo">
+
+        <div id="categories_div">
+            <a href="index.html">Home</a>
+            <a href="#">About us</a>
+            <a href="api.html">Shop</a>
+            <a href="#">Categories</a>
+            <a href="#">Contact Us</a>
+
+
+        </div>
+        <div id="addtocart_div">
+           
+            <a href="login.html">login</a>
+           
+            <a href="cart.html">cart</a>
+
+        </div>
+
+    </div>
+</body>
+
+<body>
+    <h1>Health And Personal Care</h1>
+    <div id="container_content">
+
+        <div><img src="healthandpersonalcare/image-01.jpg" alt="first">
+            <h4>Aloe Vera </h4>
+            <h6>200 rupee</h6>
+            <button>ADD TO CART</button>
+        </div>
+        <div><img src="healthandpersonalcare/image-02.jpg" alt="first">
+            <h4>Tab </h4>
+            <h6>200 rupee</h6>
+            <button>ADD TO CART</button>
+        </div>
+        <div><img src="healthandpersonalcare/image-05.jpg" alt="first">
+            <h4>choppers </h4>
+            <h6>200 rupee</h6>
+            <button>ADD TO CART</button>
+        </div>
+        <div><img src="healthandpersonalcare/image-09.jpg" alt="first">
+            <h4> gel</h4>
+            <h6>200 rupee</h6>
+            <button>ADD TO CART</button>
+        </div>
+        <div><img src="healthandpersonalcare/image-22.jpg" alt="first">
+            <h4>choppers </h4>
+            <h6>200 rupee</h6>
+            <button>ADD TO CART</button>
+        </div>
+        <div><img src="healthandpersonalcare/image-25.jpg" alt="first">
+            <h4>chawanprash </h4>
+            <h6>200 rupee</h6>
+            <button>ADD TO CART</button>
+        </div>
+        <div><img src="healthandpersonalcare/image-02.jpg" alt="first">
+            <h4>tablets </h4>
+            <h6>200 rupee</h6>
+            <button>ADD TO CART</button>
+        </div>
+
+    </div>
+
+
+
+
+
+</body>
+
+<body>
+    <!-- footer -->
+
+
+    <div class="top_footer">
+        <h2 style="color:rgb(255, 255, 255);">Want style Ideas and Treats?</h2>
+        <br><br>
+
+        <form>
+            <input id="new_footer" type="text" placeholder="Enter Email*">
+            <button id="button" type="submit">SUBSCRIBE</button>
+        </form>
+    </div>
+    <div class="footer_footer">
+        <div class="col_0">
+            <img width="50%" src="logo.jpg" alt="logo">
+        </div>
+        <div class="col_1">
+            <h3>SUPPORT</h3>
+            <a href="#">About Us</a><br>
+
+            <a href="#">Contact Us</a>
+
+        </div>
+        <div class="col_2">
+            <h3>SHOP</h3>
+            <a href="#">My Acoount</a>
+
+        </div>
+        <div class="col_3">
+            <h3>COMPANY</h3>
+            <a href="#">Shipping and Returns</a><br>
+            <a href="#">Privacy Policy</a><br>
+
+            <a href="#">Terms & Conditions</a><br>
+
+        </div>
+        <div class="col_4">
+            <h3>CONTACT</h3>
+
+            <h4>Customer Care <br>
+                Email:xyz@gmail.com <br>
+                Mobile: xxxxxxxxxxx <br>
+
+            </h4>
+        </div>
+    </div>
+    <div class="footer_bottom">
+        <div>
+            <h4>© 2019 – 2022 UBORIC. ALL RIGHTS RESERVED.</h4>
+
+        </div>
+        <div class="col_5">
+            <a href="#">facebook</a>
+            <a href="#">instagram</a>
+
+        </div>
+    </div>
+
+</body>
+<script>
+    let top_bar = document.createElement("div");
+    top_bar.innerHTML = "FOR ONLINE PAYMENT EXTRA ₹5% DISCOUNT ON ORDERS ABOVE ₹500";
+    document.querySelector("#top_bar").append(top_bar);
+</script>
+
+</html>
